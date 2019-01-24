@@ -1,0 +1,143 @@
+/**
+ * CryptoDashboard: style.css
+ * Licensed under MIT (https://github.com/harrisonrw/CryptoDashboard/blob/master/LICENSE)
+ */
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background-image: url(jana-sabeth-schultz-1312258-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Montserrat;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.wrapper {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.0);
+    overflow: hidden;
+}
+
+/* Form */
+
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+  
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+  
+input[type=submit] {
+    background-color: #388E3C;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+  
+input[type=submit]:hover {
+    background-color: #388E3C;
+}
+
+/* Grid */
+
+.container {
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+  
+.col-50 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Crypto Dashboard */
+
+.currency-id {
+    position: absolute;
+    left: 50%;
+    top: 520px;
+    color: #555;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.result-container {
+    width: 90%;
+    float: center;
+    padding: 100px;
+}
+
+.currency-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.currency-value {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #FF5252;
+    margin-bottom: 130px;
+}
+
+.photo-credit {
+    float: center;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+

@@ -1,0 +1,44 @@
+<!--
+CryptoDashboard: index.html
+Licensed under MIT (https://github.com/harrisonrw/CryptoDashboard/blob/master/LICENSE)
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title>Crypto Dashboard</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+
+            <div class="container">
+
+                <form>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="currency-id">Currency:</label>
+                        </div>
+                        <div class="col-50">
+                            <input type="text" id="currency-id" value="BTC">
+                        </div>
+                        <div class="col-25">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="result-container">
+                <div class="currency-name" id="current-currency-name">Bitcoin</div>
+                <div class="currency-value" id="current-currency-value">$0.00</div>
+            </div>
+            
+            <div class="photo-credit">Photo by Jana Sabeth Schultz on Unsplash</div>
+            
+        </div>
+        
+    </body>
+</html>
