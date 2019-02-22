@@ -96,7 +96,7 @@ input[type=button]:hover {
 
 /* Crypto Dashboard */
 
-.currency-id {
+.currency-symbol {
     position: absolute;
     left: 50%;
     top: 520px;

@@ -8,6 +8,7 @@ Licensed under MIT (https://github.com/harrisonrw/CryptoDashboard/blob/master/LI
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
         <link type="text/css" rel="stylesheet" href="style.css">
+        <script src="APIKeys.js"></script>
         <script src="app.js"></script>
         <title>Crypto Dashboard</title>
     </head>
@@ -20,10 +21,10 @@ Licensed under MIT (https://github.com/harrisonrw/CryptoDashboard/blob/master/LI
                 <form>
                     <div class="row">
                         <div class="col-25">
-                            <label for="currency-id">Currency:</label>
+                            <label for="currency-symbol">Symbol:</label>
                         </div>
                         <div class="col-50">
-                            <input type="text" id="currency-id" value="BTC">
+                            <input type="text" id="currency-symbol" value="BTC">
                         </div>
                         <div class="col-25">
                             <input type="button" value="Submit" onclick="submitForm()">
