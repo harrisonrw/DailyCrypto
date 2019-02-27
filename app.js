@@ -17,6 +17,9 @@ currencyNameTable['ETH'] = ['ETHEREUM'];
 
 const timeZoneOffset = '-08:00';
 
+/**
+ * Set the form to the initial state.
+ */
 function initializeForm() {
 
     // Get yesterday's date.
@@ -37,22 +40,31 @@ function initializeForm() {
 
     var formattedDate = year + '-' + month + '-' + day;
 
+    document.getElementById("currency-symbol").value = 'BTC';
     document.getElementById("date").value = formattedDate;
-}
-
-function submitForm() {
-    var symbol = document.getElementById("currency-symbol").value;
-    var date = document.getElementById("date").value;
-    document.querySelector('#current-currency-name').textContent = currencyNameTable[symbol][0];
+    document.querySelector('#current-currency-name').textContent = currencyNameTable[currencySymbol][0];
     document.querySelector('#current-currency-value').textContent = '';
-    fetchClosePrice(symbol, date);
 }
 
-function fetchClosePrice(symbol, date) {
+/**
+ * Form submission handler.
+ */
+function submitForm() {
+    var currencySymbol = document.getElementById("currency-symbol").value;
+    var date = document.getElementById("date").value;
+    document.querySelector('#current-currency-name').textContent = currencyNameTable[currencySymbol][0];
+    document.querySelector('#current-currency-value').textContent = '';
+    fetchClosePrice(currencySymbol, date);
+}
+
+/**
+ * Fetch and update the UI with the closing price of a currency on the specified date.
+ */
+function fetchClosePrice(currencySymbol, date) {
 
     const formattedDate = date + 'T00:00:00' + timeZoneOffset;
 
-    const url = baseURL + symbolTable[symbol][0] + '/history?period_id=1DAY&time_start=' + formattedDate;
+    const url = baseURL + symbolTable[currencySymbol][0] + '/history?period_id=1DAY&time_start=' + formattedDate;
 
     var headers = new Headers();
     headers.append('X-CoinAPI-Key', COIN_API_KEY);
@@ -78,7 +90,7 @@ function fetchClosePrice(symbol, date) {
 
             //console.log(data);
 
-            var closePrice = data[0].price_close
+            var closePrice = data[0].price_close.toFixed(2);
 
             document.querySelector('#current-currency-value').textContent = '$' + closePrice;
         })
