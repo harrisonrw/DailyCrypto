@@ -123,6 +123,7 @@ function fetchClosePrice(currencySymbol, date) {
 
             if (data.length == 0) {
                 console.log('No data');
+                document.querySelector('#current-currency-value').textContent = 'No data';
                 return;
             }
 
@@ -134,6 +135,7 @@ function fetchClosePrice(currencySymbol, date) {
         })
     .catch(function(error) {
         console.log(JSON.stringify(error));
+        document.querySelector('#current-currency-value').textContent = 'error';
     });   
 
 }
