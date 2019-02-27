@@ -6,7 +6,7 @@
 /* General */
 
 * {
-    margin: 0;
+    /*margin: 0;*/
     padding: 0;
     box-sizing: border-box;
 }
@@ -24,7 +24,7 @@ body {
     font-family: Montserrat;
     font-weight: 300;
     position: relative;
-    height: 100vh;
+    height: 130vh;
     color: #555;
 }
 
@@ -84,7 +84,7 @@ input[type=button]:hover {
     clear: both;
 }
 
-/* Crypto Dashboard */
+/* Daily Crypto */
 
 .currency-symbol, .date {
     position: absolute;
