@@ -1,6 +1,6 @@
 /**
- * CryptoDashboard: app.js
- * Licensed under MIT (https://github.com/harrisonrw/CryptoDashboard/blob/master/LICENSE)
+ * DailyCrypto: app.js
+ * Licensed under MIT (https://github.com/harrisonrw/DailyCrypto/blob/master/LICENSE)
  */
 
 
