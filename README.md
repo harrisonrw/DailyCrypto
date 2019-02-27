@@ -1,2 +1,2 @@
-# CryptoDashboard
-Cryptocurrency Dashboard
+# DailyCrypto
+Lookup daily values of various crypto currencies.
