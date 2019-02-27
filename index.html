@@ -9,7 +9,6 @@ Licensed under MIT (https://github.com/harrisonrw/CryptoDashboard/blob/master/LI
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
         <link type="text/css" rel="stylesheet" href="style.css">
         <script src="APIKeys.js"></script>
-        <script src="app.js"></script>
         <title>Crypto Dashboard</title>
     </head>
 
@@ -22,8 +21,8 @@ Licensed under MIT (https://github.com/harrisonrw/CryptoDashboard/blob/master/LI
                     <div class="row">
                         <label for="currency-symbol">Symbol:</label>
                         <input type="text" id="currency-symbol" value="BTC">
-                        <label for="date">Date:</label>
-                        <input type="text" id="date" value="Today">
+                        <label for="date">Date: (yyyy-mm-dd)</label>
+                        <input type="text" id="date">
                         <input type="button" value="Submit" onclick="submitForm()">
                     </div>
                 </form>
@@ -37,6 +36,8 @@ Licensed under MIT (https://github.com/harrisonrw/CryptoDashboard/blob/master/LI
             <div class="photo-credit">Photo by Jana Sabeth Schultz on Unsplash</div>
             
         </div>
+
+        <script src="app.js"></script>
         
     </body>
 </html>

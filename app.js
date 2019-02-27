@@ -15,16 +15,44 @@ var currencyNameTable = {};
 currencyNameTable['BTC'] = ['BITCOIN'];
 currencyNameTable['ETH'] = ['ETHEREUM'];
 
-function submitForm() {
-    var symbol = document.getElementById("currency-symbol").value;
-    document.querySelector('#current-currency-name').textContent = currencyNameTable[symbol][0];
-    document.querySelector('#current-currency-value').textContent = '';
-    fetchClosePrice(symbol)
+const timeZoneOffset = '-08:00';
+
+function initializeForm() {
+
+    // Get yesterday's date.
+    var date = new Date();
+    date.setDate(date.getDate() - 1);
+
+    var year = date.getFullYear();
+
+    var month = date.getMonth() + 1;
+    if (month < 10) {
+        month = '0' + month;
+    }
+
+    var day = date.getDate();
+    if (day < 10) {
+        day = '0' + day;
+    }
+
+    var formattedDate = year + '-' + month + '-' + day;
+
+    document.getElementById("date").value = formattedDate;
 }
 
-function fetchClosePrice(symbol) {
+function submitForm() {
+    var symbol = document.getElementById("currency-symbol").value;
+    var date = document.getElementById("date").value;
+    document.querySelector('#current-currency-name').textContent = currencyNameTable[symbol][0];
+    document.querySelector('#current-currency-value').textContent = '';
+    fetchClosePrice(symbol, date);
+}
 
-    const url = baseURL + symbolTable[symbol][0] + '/history?period_id=1DAY&time_start=2019-02-21T00:00:00-08:00'
+function fetchClosePrice(symbol, date) {
+
+    const formattedDate = date + 'T00:00:00' + timeZoneOffset;
+
+    const url = baseURL + symbolTable[symbol][0] + '/history?period_id=1DAY&time_start=' + formattedDate;
 
     var headers = new Headers();
     headers.append('X-CoinAPI-Key', COIN_API_KEY);
@@ -48,7 +76,7 @@ function fetchClosePrice(symbol) {
                 return;
             }
 
-            console.log(data);
+            //console.log(data);
 
             var closePrice = data[0].price_close
 
@@ -59,3 +87,5 @@ function fetchClosePrice(symbol) {
     });   
 
 }
+
+initializeForm();
