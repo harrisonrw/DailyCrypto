@@ -1,5 +1,5 @@
 # DailyCrypto
-Lookup daily closing values of 20 crypto currencies.
+Lookup daily closing values of 20+ crypto currencies.
 
 Data is fetched via [CoinAPI.io](http://coinapi.io/). Values are shown in US Dollars.
 
@@ -15,10 +15,12 @@ const COIN_API_KEY = 'YOUR COINAPI.IO KEY';
 
 ## Supported Crypto Currency Symbols
 - ADA
+- BNB
 - BTC
 - BTG
 - BCH
 - DASH
+- DOGE
 - EOS
 - ETC
 - ETH
@@ -27,6 +29,8 @@ const COIN_API_KEY = 'YOUR COINAPI.IO KEY';
 - LTC
 - MKR
 - NEO
+- SOL
+- THETA
 - TRX
 - USDT
 - XEM

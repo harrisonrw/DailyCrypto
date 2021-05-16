@@ -9,10 +9,12 @@ const baseURL = 'https://rest.coinapi.io/v1/ohlcv/';
 
 var symbolTable = {
     'ADA': 'KRAKEN_SPOT_ADA_USD',
+    'BNB': 'YOBIT_SPOT_BNB_USD',
     'BTC': 'BITSTAMP_SPOT_BTC_USD',
     'BTG': 'BITFINEX_SPOT_BTG_USD',
     'BCH': 'BITSTAMP_SPOT_BCH_USD',
     'DASH': 'KRAKEN_SPOT_DASH_USD',
+    'DOGE': 'YOBIT_SPOT_DOGE_USD',
     'EOS': 'BITFINEX_SPOT_EOS_USD',
     'ETC': 'BITFINEX_SPOT_ETC_USD',
     'ETH': 'BITSTAMP_SPOT_ETH_USD',
@@ -21,6 +23,8 @@ var symbolTable = {
     'LTC': 'BITSTAMP_SPOT_LTC_USD',
     'MKR': 'BITFINEX_SPOT_MKR_USD',
     'NEO': 'BITFINEX_SPOT_NEO_USD',
+    'SOL': 'BINANCEUS_SPOT_SOL_USD',
+    'THETA': 'YOBIT_SPOT_THETA_USD',
     'TRX': 'BITFINEX_SPOT_TRX_USD',
     'USDT': 'BITTREX_SPOT_USDT_USD',
     'XLM': 'KRAKEN_SPOT_XLM_USD',
@@ -32,10 +36,12 @@ var symbolTable = {
 
 var currencyNameTable = {
     'ADA': 'CARDANO',
+    'BNB': 'BINANCE COIN',
     'BTC': 'BITCOIN',
     'BTG': 'BITCOIN GOLD',
     'BCH': 'BITCOIN CASH',
     'DASH': 'DASH',
+    'DOGE': 'DOGECOIN',
     'EOS': 'EOS',
     'ETC': 'ETHEREUM CLASSIC',
     'ETH': 'ETHEREUM',
@@ -44,6 +50,8 @@ var currencyNameTable = {
     'LTC': 'LITECOIN',
     'MKR': 'MAKER',
     'NEO': 'NEO',
+    'SOL': 'SOLANA',
+    'THETA': 'THETA',
     'TRX': 'TRON',
     'USDT': 'TETHER',
     'XEM': 'NEM',
